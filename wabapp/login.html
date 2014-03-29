@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <title>Huskar</title>
+        <script type="text/javascript" src="extjs/ext-core.js"></script>
+        <script type="text/javascript" src="resources/js/login.js"></script>
+        <link href="resources/css/login.css" media="all" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+    	<div id="loading-mask">
+	       <div id="loading" class="loding">
+	           <div class="loading-indicator">
+	           		<span id="loading-info"></span><span id="loading-msg"></span>
+	                <img src="resources/images/loading.gif"/>
+	           </div>
+	        </div>
+    	</div>
+         <div id="wrap" style="width:400px;height:245px;top:200px;position:relative;margin: 0 auto;">
+            <div id="bd" class="bd">
+                <div id="bdwrap" class="bdwrap">
+                	<div id="login" class="login">
+	                	<form  id="loginForm" action="#" method="post">
+	                    	<div id="loginTable">
+                                <table  class="login_table">
+                                	<tr><td colspan=2 class='table_header'></td></tr>
+                                	<tr>
+                                		<td>用户名:</td>
+                                		<td>
+                                			<input style="height:25px;width:200px;font-size:13px;" type="text" id="username" name="username"  value="4" onkeydown="javascript:unameKeydown(this,event);" onclick="javascript:unameKeydown(this,event);" onblur="javascript:unameBlur(this,event);" tabindex="1"/>
+                                		</td>
+                                	</tr>
+                                	<tr><td>密码:</td>
+                                		<td>
+                                			<input style="height:25px;width:200px;" id="password" name="password" type="password" value="4" onkeydown="javascript:passKeydown(this,event);" onclick="javascript:passKeydown(this,event);" tabindex="2"/>
+                                		</td>
+                                	</tr>
+                                	<tr><td></td>
+                                		<td>
+                                			<button type="button" id="loginbtn" class="loginbtn" onclick="javascript:check();" tabindex="4">登 录</button>
+                                		</td>
+                                	</tr>
+                                	<tr>
+                                		<td colspan=2>
+                                		   <div id="msgTip" style="font-size:15px;font-style:italic">欢迎回来</div>
+                               			</td>
+                                	</tr>
+                                </table>
+                               </div> 
+                            </form>   
+	                  </div>
+                </div>
+	    </div>
+	   </div>
+	</body>
+    <script>
+        document.getElementById('username').value = '4';
+        document.getElementById('username').style.color = '4';
+        //document.getElementById('username').focus();
+        Ext.fly("bdwrap").show();
+    </script>
+</html>

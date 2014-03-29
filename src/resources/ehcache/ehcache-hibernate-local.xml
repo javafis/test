@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+
+	<diskStore path="java.io.tmpdir/hibernate/mini-web" />
+
+	<!-- DefaultCache setting. -->
+	<defaultCache maxElementsInMemory="10000" memoryStoreEvictionPolicy="LRU" eternal="false"
+		timeToIdleSeconds="300" timeToLiveSeconds="300" overflowToDisk="false" diskPersistent="false" />
+
+	<!-- Special objects setting. -->
+	<cache name="com.cnooc.smp.entity.account.User" maxElementsInMemory="10000"
+		memoryStoreEvictionPolicy="LRU" eternal="true" diskPersistent="false" overflowToDisk="true" maxElementsOnDisk="1000000" />
+	<cache name="com.cnooc.smp.entity.account.User.roleList" maxElementsInMemory="10000"
+		memoryStoreEvictionPolicy="LRU" eternal="true" diskPersistent="false" overflowToDisk="true" maxElementsOnDisk="1000000" />
+	<cache name="com.cnooc.smp.entity.account.Role" maxElementsInMemory="10000"
+		memoryStoreEvictionPolicy="LRU" eternal="true" diskPersistent="false" overflowToDisk="true" maxElementsOnDisk="1000000" />
+	<cache name="com.cnooc.smp.entity.account.Role.authorityList" maxElementsInMemory="10000"
+		memoryStoreEvictionPolicy="LRU" eternal="true" diskPersistent="false" overflowToDisk="true" maxElementsOnDisk="1000000" />
+	<cache name="com.cnooc.smp.entity.account.Authority" maxElementsInMemory="10000"
+		memoryStoreEvictionPolicy="LRU" eternal="true" diskPersistent="false" overflowToDisk="true" maxElementsOnDisk="1000000" />
+	<cache name="com.cnooc.smp.entity.account.Resource" maxElementsInMemory="10000"
+		memoryStoreEvictionPolicy="LRU" eternal="true" diskPersistent="false" overflowToDisk="true" maxElementsOnDisk="1000000" />
+	<cache name="com.cnooc.smp.entity.account.Resource.authorityList" maxElementsInMemory="10000"
+		memoryStoreEvictionPolicy="LRU" eternal="true" diskPersistent="false" overflowToDisk="true" maxElementsOnDisk="1000000" />
+
+	<cache name="com.cnooc.smp.entity.supplier.SmpElementType" maxElementsInMemory="10000"
+		memoryStoreEvictionPolicy="LRU" eternal="false" timeToIdleSeconds="3600" timeToLiveSeconds="7200" diskPersistent="false" overflowToDisk="true" maxElementsOnDisk="1000000" />
+	<cache name="com.cnooc.smp.entity.supplier.SmpElement" maxElementsInMemory="10000"
+		memoryStoreEvictionPolicy="LRU" eternal="false" timeToIdleSeconds="3600" timeToLiveSeconds="7200" diskPersistent="false" overflowToDisk="true" maxElementsOnDisk="1000000" />
+	<cache name="com.cnooc.smp.entity.supplier.SmpElementRelational" maxElementsInMemory="10000"
+		memoryStoreEvictionPolicy="LRU" eternal="false" timeToIdleSeconds="3600" timeToLiveSeconds="7200" diskPersistent="false" overflowToDisk="true" maxElementsOnDisk="1000000" />
+	<cache name="com.cnooc.smp.entity.common.MetadataType" maxElementsInMemory="10000"
+		memoryStoreEvictionPolicy="LRU" eternal="false" timeToIdleSeconds="3600" timeToLiveSeconds="7200" diskPersistent="false" overflowToDisk="true" maxElementsOnDisk="1000000" />		
+	<cache name="com.cnooc.smp.entity.common.Metadata" maxElementsInMemory="10000"
+		memoryStoreEvictionPolicy="LRU" eternal="false" timeToIdleSeconds="3600" timeToLiveSeconds="7200" diskPersistent="false" overflowToDisk="true" maxElementsOnDisk="1000000" />				
+</ehcache>
